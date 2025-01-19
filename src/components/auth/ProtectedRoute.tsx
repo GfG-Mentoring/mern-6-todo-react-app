@@ -14,18 +14,12 @@ const Authenticated = ({ children }: any) => {
         </>
     }
 
-    return <div style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100vw'
-    }}>
+    return <div className='flex w-screen h-screen flex-col justify-center items-center'>
         <h3>
             You're not Authenticated.
             Please login to access this page.
         </h3>
-        <button onClick={() => navigate('/login')}>Login</button>
+        <button className='border bg-blue-600 px-4 py-1 text-white rounded-md' onClick={() => navigate('/login')}>Login</button>
     </div>
 }
 

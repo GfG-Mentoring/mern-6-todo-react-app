@@ -27,10 +27,16 @@ const authSlice = createSlice({
             state.fullName = data.fullName;
 
         },
-        clearAuth: (state, action) => { }
+        clearAuth: (state, action) => {
+            state.authToken = null;
+            state.email = null;
+            state.fullName = null;
+            localStorage.removeItem('auth');
+        }
     }
 });
 
 
 export const { updateAuth, clearAuth } = authSlice.actions;
 export const authReducer = authSlice.reducer;
+export { authSlice };

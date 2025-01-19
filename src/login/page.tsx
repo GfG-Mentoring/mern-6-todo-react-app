@@ -47,16 +47,10 @@ const LoginPage = () => {
 
     return (
         //   create a login page
-        <div className=''>
+        <div className='w-screen h-screen flex items-center justify-center flex-col'>
             <form
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-
-                }}
                 onSubmit={handleLogin}
+                className='flex flex-col gap-2'
             >
                 <h1>Login Page</h1>
                 <input

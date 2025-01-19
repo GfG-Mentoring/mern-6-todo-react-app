@@ -8,31 +8,14 @@ const Navbar = () => {
 
 
     return (
-        <div
-            style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                maxHeight: '4rem',
-                width: "100%",
-                border: "1px solid white",
-                display: "flex",
-                justifyContent: "space-between"
-            }}
-        >
-            <div>
+        <div className='w-screen flex gap-4 justify-between flex-row p-2'>
+            <div className='font-semibold text-lg '>
                 Todo app
             </div>
-            <div>
-                search bar
+            <div >
             </div>
-            <div style={{ display: 'flex', alignItems: "center" }}>
-                <img style={{
-                    width: "2rem",
-                    height: "2rem",
-                    borderRadius: "50%"
-                    // dicebear
-                }} src={`https://api.dicebear.com/9.x/initials/svg?seed=${userName}`} />
+            <div className='flex gap-2 items-center'>
+                <img className='w-8 h-8 rounded-full' src={`https://api.dicebear.com/9.x/initials/svg?seed=${userName}`} />
                 <span>{userName}</span>
             </div>
         </div>

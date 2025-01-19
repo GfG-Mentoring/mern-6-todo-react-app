@@ -6,7 +6,7 @@ const reduxStore = configureStore({
     reducer: {
         auth: authReducer
     }
-})
+});
 
 
 export { reduxStore };

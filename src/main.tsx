@@ -1,6 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 import App from './App.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LoginPage from './login/page.tsx'
@@ -11,10 +10,10 @@ import Authenticated from './components/auth/ProtectedRoute.tsx'
 import { Provider } from 'react-redux'
 import { reduxStore } from './store/index.ts'
 import { ToastContainer } from 'react-toastify'
+import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ToastContainer />
     <Provider store={reduxStore} >
 
       {/* <AuthProvider > */}
@@ -30,6 +29,7 @@ createRoot(document.getElementById('root')!).render(
           < Route path="/user/:userId" element={< UserDetails />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </Provider>
     {/* </AuthProvider> */}
   </StrictMode>,
